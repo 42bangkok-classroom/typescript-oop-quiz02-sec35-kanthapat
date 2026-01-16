@@ -16,6 +16,7 @@ export const getPostsByUser = async (userId: number): Promise<UserPost[]> => {
   try {
     const { data } = await axios.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
 
+
     return data
       .filter((post) => post.userId === userId)
       .map(({ id, title }) => ({

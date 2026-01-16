@@ -23,7 +23,7 @@ export const getEdgePosts = async (): Promise<EdgePost[]> => {
     const firstPost = data[0];
     const lastPost = data[data.length - 1];
 
-    // Uses map to satisfy "Use at least one array or object method"
+ 
     return [firstPost, lastPost].map(({ id, title }) => ({
       id,
       title,
