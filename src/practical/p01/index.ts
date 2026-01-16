@@ -28,7 +28,7 @@ export const getEdgePosts = async (): Promise<EdgePost[]> => {
       id,
       title,
     }));
-  } catch (error) {
-    throw error;
+  } catch (err:any) {
+    throw err;
   }
 };

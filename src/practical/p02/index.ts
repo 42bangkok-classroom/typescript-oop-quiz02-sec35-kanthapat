@@ -24,7 +24,7 @@ export const getPostsByUser = async (userId: number): Promise<UserPost[]> => {
         title,
       }));
 
-  } catch (error) {
-    throw error;
+  } catch (err:any) {
+    throw err;
   }
 };

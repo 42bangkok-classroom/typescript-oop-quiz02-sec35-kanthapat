@@ -43,7 +43,7 @@ export const mapPostWithCommentCount = async (): Promise<PostWithCommentCount[]>
       totalComments: commentCounts[post.id] || 0,
     }));
 
-  } catch (error) {
-    throw error;
+  } catch (err:any) {
+    throw err;
   }
 };

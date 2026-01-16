@@ -23,7 +23,7 @@ export const countCommentsByPost = async (): Promise<Record<number, number>> => 
       return acc;
     }, {} as Record<number, number>);
 
-  } catch (error) {
-    throw error;
+  } catch (err:any) {
+    throw err;
   }
 };

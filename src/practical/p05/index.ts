@@ -28,7 +28,7 @@ export const safeFetchComment = async (commentId: number | null | undefined): Pr
       body: comment.body,
     }))[0];
 
-  } catch (error) {
+  } catch (err: any) {
     return null;
   }
 };
