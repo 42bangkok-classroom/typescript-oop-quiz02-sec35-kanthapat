@@ -31,13 +31,12 @@ export const mapPostWithCommentCount = async (): Promise<PostWithCommentCount[]>
     const posts = postsRes.data;
     const comments = commentsRes.data;
 
-
     const commentCounts = comments.reduce((acc, comment) => {
       acc[comment.postId] = (acc[comment.postId] || 0) + 1;
       return acc;
     }, {} as Record<number, number>);
 
-
+  
     return posts.map((post) => ({
       postId: post.id,
       title: post.title,
